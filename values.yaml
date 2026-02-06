@@ -11,7 +11,11 @@ service:
 istio:
   enabled: true
   host: "fitmarket-service"
-env: {}
+env:
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://postgresql-fitmarket:5432/fitnest_fitmarket"
+  SPRING_DATASOURCE_USERNAME: "fitnest_fitmarket"
+  SPRING_DATASOURCE_PASSWORD: "fitmarket_password_123"
+  SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
 resources:
   requests:
     cpu: 100m
